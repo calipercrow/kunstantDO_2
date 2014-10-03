@@ -1,29 +1,30 @@
 <h1>Listing projects</h1>
 
-<table>
-  <thead>
-    <tr>
-      <th>P default</th>
-      <th>P title</th>
-      <th>P description</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
+<hr />
 
-  <tbody>
-    <% @projects.each do |project| %>
-      <tr>
-        <td><%= project.p_default %></td>
-        <td><%= project.p_title %></td>
-        <td><%= project.p_description %></td>
-        <td><%= link_to 'Show', project %></td>
-        <td><%= link_to 'Edit', edit_project_path(project) %></td>
-        <td><%= link_to 'Destroy', project, method: :delete, data: { confirm: 'Are you sure?' } %></td>
-      </tr>
-    <% end %>
-  </tbody>
-</table>
+<% @projects.each do |p| %>
+  <div>
+    <h4> Default ? </h4>
+    <%= p.p_default %>
+      <br>
+    <h4> 
+    <%= link_to p.p_title, p %>
+    </h4>
+    <%= p.p_description %>
+  </div>
+  <br>
+<div>
+<!--   <%= link_to 'Show', p %> -->
+  <%= link_to 'Edit', edit_project_path(p) %>
+  <%= link_to 'Delete', p, method: :delete, data: { confirm: 'Are you sure?' } %>
+</div>
+
+  <hr />
+
+<% end %>
+
 
 <br>
 
-<%= link_to 'New Project', new_project_path %>
+<%= link_to 'Make Something', new_project_path %>
+

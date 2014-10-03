@@ -17,21 +17,22 @@
 
 <hr />
 
-<h3>New Update</h3>
+<!-- <h3>New Update</h3> -->
 <%= render 'updates/form' %>
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
 
 <hr />
 
 <h3> Updates </h3>
 
-<% @project.updates.each do |update_var| %>
-<p>
-<%= update_var.u_text %>
-<br>
-<%= time_ago_in_words update_var.created_at %> ago
-</p>
+<% @project.updates.each do |u| %>
+
+		<p>
+			<%= link_to u.u_text, project_update_path(@project, u) %>
+		<br>
+			<%= time_ago_in_words u.created_at %> ago
+		</p>
+
 <% end %>
-
-
-<%= link_to 'Edit', edit_project_path(@project) %> |
-<%= link_to 'Back', projects_path %>
