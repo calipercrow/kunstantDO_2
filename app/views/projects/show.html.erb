@@ -1,0 +1,37 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>P default:</strong>
+  <%= @project.p_default %>
+</p>
+
+<p>
+  <strong>P title:</strong>
+  <%= @project.p_title %>
+</p>
+
+<p>
+  <strong>P description:</strong>
+  <%= @project.p_description %>
+</p>
+
+<hr />
+
+<h3>New Update</h3>
+<%= render 'updates/form' %>
+
+<hr />
+
+<h3> Updates </h3>
+
+<% @project.updates.each do |update_var| %>
+<p>
+<%= update_var.u_text %>
+<br>
+<%= time_ago_in_words update_var.created_at %> ago
+</p>
+<% end %>
+
+
+<%= link_to 'Edit', edit_project_path(@project) %> |
+<%= link_to 'Back', projects_path %>
