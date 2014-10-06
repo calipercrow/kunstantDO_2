@@ -30,7 +30,7 @@
 <!-- <% end %> -->
 
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit @update.new_record? ? "Update" : "Change my Update" %>
   </div>
 
 <% end %>

@@ -1,17 +1,17 @@
 <p id="notice"><%= notice %></p>
 
 <p>
-  <strong>P default:</strong>
+  <strong>Default:</strong>
   <%= @project.p_default %>
 </p>
 
 <p>
-  <strong>P title:</strong>
+  <strong>Title:</strong>
   <%= @project.p_title %>
 </p>
 
 <p>
-  <strong>P description:</strong>
+  <strong>Description:</strong>
   <%= @project.p_description %>
 </p>
 
@@ -25,13 +25,15 @@
 
 <hr />
 
+<!-- Show Updates generated here -->
+
 <h3> Updates </h3>
 
 <% @project.updates.each do |u| %>
 
 		<p>
 			<%= link_to u.u_text, project_update_path(@project, u) %>
-		<br>
+		  <br>
 			<%= time_ago_in_words u.created_at %> ago
 		</p>
 

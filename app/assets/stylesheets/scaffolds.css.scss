@@ -35,15 +35,22 @@ div {
   }
 }
 
+/* THIS CONTROLS NOTICES LIKE SUCCESS! OR DELETE! */
+
 #notice {
   color: green;
 }
+
+
+/* THIS CONTROLS THE ERROR VALIDATION FIELD */
 
 .field_with_errors {
   padding: 2px;
   background-color: red;
   display: table;
 }
+
+/* THIS CONTROLS THE ERROR VALIDATION MESSAGE */
 
 #error_explanation {
   width: 450px;
