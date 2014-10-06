@@ -1,5 +1,7 @@
 Rails.application.routes.draw do
 
+  resources :comments
+
   root 'projects#index'
 
   resources :updates

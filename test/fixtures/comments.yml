@@ -1,0 +1,11 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  update_id: 
+  input: MyText
+  annotation: MyText
+
+two:
+  update_id: 
+  input: MyText
+  annotation: MyText
